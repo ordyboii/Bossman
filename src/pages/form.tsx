@@ -1,6 +1,4 @@
-"use client";
-
-import { useState } from "react";
+import { useState } from "preact/hooks";
 
 export default function Form() {
   const [email, setEmail] = useState("");
@@ -21,7 +19,7 @@ export default function Form() {
         type='email'
         placeholder='Your email'
         value={email}
-        onChange={e => setEmail(e.target.value)}
+        onChange={e => setEmail(e.currentTarget.value)}
       />
       <a
         href={`mailto:bossjuicynews@outlook.com?subject=Request to join the Bossman's news from ${email}&body=Request to join`}

@@ -1,0 +1,88 @@
+---
+import Form from "./form";
+---
+
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8' />
+    <meta http-equiv='X-UA-Compatible' content='IE=edge' />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <title>Bossman's Juicy News</title>
+    <meta
+      name='description'
+      content='Bossmans juicy news from Boss Store, Fenwicks, Newcastle'
+    />
+    <link rel='icon' href='/favicon.ico' />
+  </head>
+  <body>
+    <main>
+      <div>
+        <h1>Bossman's Juicy News</h1>
+        <p>
+          The latest <strong>juicy</strong> news from Boss Store, Fenwicks
+        </p>
+      </div>
+      <Form client:idle />
+      <em>
+        Be aware of your surroundings, you do not know who's talking to you as a
+        friend or reporter!
+      </em>
+    </main>
+
+    <style is:global>
+      html,
+      body {
+        padding: 0;
+        margin: 0;
+        background-color: hsl(0 0% 4%);
+        color: white;
+        min-height: 100%;
+        font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+          Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+      }
+
+      a {
+        color: inherit;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      main {
+        display: grid;
+        place-content: center;
+        height: 100vh;
+        text-align: center;
+        gap: 1rem;
+        padding: 0 2rem;
+      }
+
+      input {
+        border: 0;
+        background-color: white;
+        padding: 0.8rem 1rem;
+        font-size: 0.9rem;
+      }
+
+      .submit {
+        text-decoration: none;
+        background-color: gold;
+        padding: 0.8rem;
+        border-radius: 0.3rem;
+        color: black;
+        transition: 300ms ease;
+      }
+      .submit:hover {
+        background-color: hsl(51, 100%, 40%);
+      }
+
+      .info {
+        border: 4px solid gold;
+        background-color: hsl(51, 100%, 90%);
+        color: black;
+        padding: 0.8rem;
+      }
+    </style>
+  </body>
+</html>
