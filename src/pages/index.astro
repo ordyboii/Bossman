@@ -17,9 +17,10 @@ import Form from "./form";
   <body>
     <main>
       <div>
-        <h1>Bossman's Juicy News</h1>
+        <h1>Boss Juicy News</h1>
         <p>
-          The latest <strong>juicy</strong> news from Boss Store, Fenwicks
+          The latest <strong>juicy</strong> news from the Boss Store, Fenwicks. <br
+          /> Presented to you from <strong>BOSSman</strong>
         </p>
       </div>
       <Form client:idle />
@@ -30,6 +31,16 @@ import Form from "./form";
     </main>
 
     <style is:global>
+      :root {
+        --main: hsl(35 28% 65%);
+        --main-hover: hsl(35 28% 55%);
+        --main-border: hsl(35 28% 90%);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
       html,
       body {
         padding: 0;
@@ -37,6 +48,7 @@ import Form from "./form";
         background-color: hsl(0 0% 4%);
         color: white;
         min-height: 100%;
+        line-height: 1.5;
         font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
           Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
       }
@@ -45,17 +57,13 @@ import Form from "./form";
         color: inherit;
       }
 
-      * {
-        box-sizing: border-box;
-      }
-
       main {
         display: grid;
         place-content: center;
         height: 100vh;
         text-align: center;
         gap: 1rem;
-        padding: 0 2rem;
+        padding: 0 1rem;
       }
 
       input {
@@ -67,19 +75,19 @@ import Form from "./form";
 
       .submit {
         text-decoration: none;
-        background-color: gold;
+        background-color: var(--main);
         padding: 0.8rem;
         border-radius: 0.3rem;
         color: black;
         transition: 300ms ease;
       }
       .submit:hover {
-        background-color: hsl(51, 100%, 40%);
+        background-color: var(--main-hover);
       }
 
       .info {
-        border: 4px solid gold;
-        background-color: hsl(51, 100%, 90%);
+        border: 4px solid var(--main);
+        background-color: var(--main-border);
         color: black;
         padding: 0.8rem;
       }
