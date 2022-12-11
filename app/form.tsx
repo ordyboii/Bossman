@@ -1,4 +1,6 @@
-import { useState } from "preact/hooks";
+"use client";
+
+import { useState } from "react";
 
 export default function Form() {
   const [sent, setSent] = useState(false);
